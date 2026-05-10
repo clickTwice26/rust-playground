@@ -1,5 +1,8 @@
 pub fn _log(level : &str, message : &str){
-
+    /*
+    Equvilent to the `cout` function in `crun.py`
+    
+     */
     let color_code = match level.to_lowercase().as_str(){
         "error" => "\x1b[31m",   // Red
         "warning" => "\x1b[33m", // Yellow

@@ -14,7 +14,7 @@ default_config = {
 	"build_command": "gcc [file_name] -o [output_name]",
 	"run_command": "./[output_name]"
 }
-def cout(message : str, type : str = "info"):
+def cout(message : str, type : str = "info"): #migrated
 	if type in ["info", "warning", "error"]:
 		prefix = "[OUT] "
 	elif type == "input":
