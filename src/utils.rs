@@ -16,7 +16,7 @@ pub fn list_files(dir_path : &str){
         Ok(entries) =>{
             for entry in entries{
                 let entry = entry.expect("Failed to get directory entry");
-                println!("{}", entry.path().display());
+                // println!("{}", entry.path().display());
             }
         },
         Err(e) => eprintln!("Error reading directory : {}", e),

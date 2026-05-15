@@ -16,6 +16,6 @@ pub fn _log(level : &str, message : &str){
     println!("{}{} : {}{}", color_code, level.to_lowercase().as_str(), reset, message);
 }
 
-pub fn clear_console(){
+pub fn _clear_console(){
     print!("\x1b[2J\x1b[1;1H");
 }
