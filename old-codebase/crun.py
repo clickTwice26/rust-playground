@@ -32,7 +32,7 @@ def cout(message : str, type : str = "info"): #migrated
 	print(Fore.CYAN + prefix + Style.RESET_ALL + colorType + message + Style.RESET_ALL, end="\n")
 def clear():
 	os.system('cls' if os.name == 'nt' else 'clear')
-def checkFileName(fileName: str) -> bool:
+def checkFileName(fileName: str) -> bool: #not cleared
 	fileName = fileName.split(" ")
 	if len(fileName) != 1:
 		return False

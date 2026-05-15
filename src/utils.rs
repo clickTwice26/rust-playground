@@ -1,6 +1,7 @@
 use std::env;
+use std::fs;
 pub fn greet(){
-    println!("Hello I am from utils file");
+    println!("CRUN Beta 2.0");
 }
 
 pub fn get_cwd()-> Result<String, i32>{
@@ -9,4 +10,18 @@ pub fn get_cwd()-> Result<String, i32>{
         Err(_) => Err(30),
     }
 }
+
+pub fn list_files(dir_path : &str){
+    match fs::read_dir(dir_path){
+        Ok(entries) =>{
+            for entry in entries{
+                let entry = entry.expect("Failed to get directory entry");
+                println!("{}", entry.path().display());
+            }
+        },
+        Err(e) => eprintln!("Error reading directory : {}", e),
+    }
+}
+
+
 
